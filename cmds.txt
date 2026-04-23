@@ -1,0 +1,14 @@
+chmod +x cert_gen.sh
+./cert_gen.sh
+
+
+python main.py
+
+python client.py tcp ping
+python client.py tcp GET_STATS
+python client.py tcp GET_RECENT 5
+
+python client.py udp ping
+python client.py udp GET_STATS
+
+python verify.py
